@@ -30,7 +30,7 @@ public class ExtensionMain implements Extension {
         EntityDefinition<Entity> entityBase = EntityDefinition.builder(Entity::new)
                 .addTranslator(MetadataTypes.BYTE, Entity::setFlags)
                 .addTranslator(MetadataTypes.INT, Entity::setAir) // Air/bubbles
-                .addTranslator(MetadataTypes.OPTIONAL_CHAT, Entity::setDisplayName)
+                .addTranslator(MetadataTypes.OPTIONAL_COMPONENT, Entity::setDisplayName)
                 .addTranslator(MetadataTypes.BOOLEAN, Entity::setDisplayNameVisible)
                 .addTranslator(MetadataTypes.BOOLEAN, Entity::setSilent)
                 .addTranslator(MetadataTypes.BOOLEAN, Entity::setGravity)
@@ -81,7 +81,7 @@ public class ExtensionMain implements Extension {
                 .height(1.975f).width(0.2f)
                 .registeredProperties(displayPropBuilder.build())
                 .identifier("geyser:item_display")
-                .addTranslator(MetadataTypes.ITEM, ItemDisplayEntity::setDisplayedItem)
+                .addTranslator(MetadataTypes.ITEM_STACK, ItemDisplayEntity::setDisplayedItem)
                 .addTranslator(MetadataTypes.BYTE, ItemDisplayEntity::setDisplayType)
                 .build();
 

@@ -1,7 +1,5 @@
 package me.zimzaza4.geyserdisplayentity;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import net.elytrium.commons.config.YamlConfig;
 
 import java.util.HashMap;
